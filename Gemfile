@@ -94,9 +94,9 @@ else
 end
 
 # Heroku
-#group :production do
-#   gem "pg"
-#end
+group :production do
+   gem "pg"
+end
 
 group :development do
   gem "rdoc", "~> 4.3"
