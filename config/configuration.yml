@@ -1,9 +1,10 @@
 production:
   delivery_method: :smtp
   smtp_settings:
-    address: <%= ENV["MAILGUN_SMTP_SERVER"] %>
-    port: <%= ENV["MAILGUN_SMTP_PORT"] %>
+    enable_starttls_auto: true
+    address: <%= ENV["MAIL_SMTP_ADDRESS"] %>
+    port: <%= ENV["MAIL_SMTP_PORT"] %>
     authentication: :plain
-    domain: <%= ENV["MAILGUN_DOMAIN"] %>
-    user_name: <%= ENV["MAILGUN_SMTP_LOGIN"] %>
-    password: <%= ENV["MAILGUN_SMTP_PASSWORD"] %>
+    domain: <%= ENV["MAIL_SMTP_DOMAIN"] %>
+    user_name: <%= ENV["MAIL_SMTP_USER"] %>
+    password: <%= ENV["MAIL_SMTP_PASSWORD"] %>
